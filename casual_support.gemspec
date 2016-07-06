@@ -9,8 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Jonathan Hefner"]
   spec.email         = ["jonathan.hefner@gmail.com"]
 
-  spec.summary       = %q{Utility methods as core extensions.}
-  spec.description   = %q{Utility methods as extensions to Ruby core objects.  Stuff I want in Active Support.}
+  spec.summary       = %q{Utility extensions to core objects, a la Active Support}
   spec.homepage      = "https://github.com/jonathanhefner/casual_support"
   spec.license       = "MIT"
 
