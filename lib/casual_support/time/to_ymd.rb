@@ -1,8 +1,7 @@
 class Time
 
   # Formats time as "YYYY-MM-DD" (e.g. "1999-12-31").  Equivalent to
-  # +strftime("%Y-%m-%d")+, but ~6% faster (or ~18% if the format
-  # string is an un-frozen literal, due to GC).
+  # +strftime("%Y-%m-%d")+, but faster.
   #
   # @return [String] the time formatted as "YYYY-MM-DD"
   def to_ymd

@@ -1,9 +1,7 @@
 class Hash
 
   # Sets a value like +Hash#[]=+, but returns the modified Hash instead
-  # of the value.  Useful with +#reduce+, and 2x faster than using
-  # an equivalent +Hash#merge!+ (see
-  # benchmark[https://github.com/JuanitoFatas/fast-ruby#hashmerge-vs-hash-code]).
+  # of the value.  Useful with +#reduce+, and faster than +Hash#merge!+.
   #
   # @param key
   # @param value

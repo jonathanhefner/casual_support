@@ -1,8 +1,7 @@
 class Time
 
   # Formats time as "HH:MM:SS" (e.g. "23:59:59").  Equivalent to
-  # +strftime("%H:%M:%S")+, but ~10% faster (or ~20% if the format
-  # string is an un-frozen literal, due to GC).
+  # +strftime("%H:%M:%S")+, but faster.
   #
   # @return [String] the time formatted as "HH:MM:SS"
   def to_hms
