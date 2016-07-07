@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'casual_support/string/before_after'
 
-class BeforeAfterTest < Minitest::Test
+class StringBeforeAfterTest < Minitest::Test
 
   def test_before_multi_delim
     assert_equal 'aa', 'aa bb cc'.before(' ')

@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'casual_support/string/first_last'
 
-class FromToTest < Minitest::Test
+class StringFromToTest < Minitest::Test
 
   def test_first_default
     assert_equal 'h', 'hello'.first

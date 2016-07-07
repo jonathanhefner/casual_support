@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'casual_support/date/to_ymd'
 
-class ToYmdTest < Minitest::Test
+class DateToYmdTest < Minitest::Test
 
   def test_to_ymd_proper_format
     assert_equal '1999-12-31', Date.new(1999, 12, 31).to_ymd

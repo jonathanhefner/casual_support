@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'casual_support/enumerable/duplicates'
 
-class DuplicatesTest < Minitest::Test
+class EnumerableDuplicatesTest < Minitest::Test
 
   def test_duplicates_returns_only_duplicates
     assert_equal [0, 1, 1, 2, 3, 5].duplicates, [1]

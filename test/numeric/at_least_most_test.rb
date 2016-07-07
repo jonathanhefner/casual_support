@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'casual_support/numeric/at_least_most'
 
-class AtLeastMostTest < Minitest::Test
+class NumericAtLeastMostTest < Minitest::Test
 
   def test_above_at_least
     assert_equal (101).at_least(100), 101

@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'casual_support/integer/to_hex'
 
-class ToHexTest < Minitest::Test
+class IntegerToHexTest < Minitest::Test
 
   def test_to_hex_without_width
     assert_equal 'ff', (255).to_hex

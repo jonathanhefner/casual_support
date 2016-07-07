@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'casual_support/time/ymd_hms'
 
-class YmdHmsTest < Minitest::Test
+class TimeYmdHmsTest < Minitest::Test
 
   def test_to_ymd_proper_format
     assert_equal '1999-12-31', Time.new(1999, 12, 31, 23, 59, 58).to_ymd

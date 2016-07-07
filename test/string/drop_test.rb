@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'casual_support/string/drop'
 
-class DropTest < Minitest::Test
+class StringDropTest < Minitest::Test
 
   def test_drop_negative
     assert_equal 'hello', 'hello'.drop(-1)

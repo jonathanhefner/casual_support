@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'casual_support/string/from_to'
 
-class FromToTest < Minitest::Test
+class StringFromToTest < Minitest::Test
 
   def test_from_positive
     assert_equal 'llo', 'hello'.from(2)

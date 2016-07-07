@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'casual_support/numeric/constrain'
 
-class ConstrainTest < Minitest::Test
+class NumericConstrainTest < Minitest::Test
 
   def test_constrain_below
     assert_equal (99).constrain(100, 110), 100
