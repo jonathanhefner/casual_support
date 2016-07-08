@@ -7,7 +7,8 @@ class String
   # @param [Integer] n number of characters to drop
   # @return [String] string of remaining characters
   def drop(n)
-    self[n.constrain(0, self.length), self.length]
+    return self.dup if n <= 0
+    self[n, self.length] || ''
   end
 
 end
