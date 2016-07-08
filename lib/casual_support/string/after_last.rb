@@ -9,7 +9,7 @@ class String
   # @return [String] portion of the string after the last +delim+
   def after_last(delim)
     i = self.rindex(delim)
-    i ? self.drop(i + delim.length) : ''
+    i ? self[i + delim.length, self.length] : ''
   end
 
 end
