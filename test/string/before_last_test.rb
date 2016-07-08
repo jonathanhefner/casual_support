@@ -7,7 +7,8 @@ class StringBeforeLastTest < Minitest::Test
   end
 
   def test_before_last_no_delim
-    assert_equal 'aa bb cc', 'aa bb cc'.before_last('z')
+    s = 'aa bb cc'
+    assert_equal_not_same s, s.before_last('z')
   end
 
 end
