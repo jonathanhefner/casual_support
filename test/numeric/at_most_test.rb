@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'casual_support/numeric/at_most'
 
 class NumericAtMostTest < Minitest::Test
 

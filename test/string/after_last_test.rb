@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'casual_support/string/after_last'
 
 class StringAfterLastTest < Minitest::Test
 

@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'casual_support/time/to_hms'
 
 class TimeToHmsTest < Minitest::Test
 

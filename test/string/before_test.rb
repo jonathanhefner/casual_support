@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'casual_support/string/before'
 
 class StringBeforeTest < Minitest::Test
 

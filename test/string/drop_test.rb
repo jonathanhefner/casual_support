@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'casual_support/string/drop'
 
 class StringDropTest < Minitest::Test
 

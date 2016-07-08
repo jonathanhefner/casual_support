@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'casual_support/hash/setbang'
 
 class HashSetbangTest < Minitest::Test
 

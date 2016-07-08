@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'casual_support/enumerable/index_to'
 
 class EnumerableIndexToTest < Minitest::Test
 
