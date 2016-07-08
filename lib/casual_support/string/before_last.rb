@@ -8,8 +8,7 @@ class String
   # @param [String] delim delimiter to search for
   # @return [String] portion of the string before the last +delim+
   def before_last(delim)
-    i = self.rindex(delim)
-    i ? self.first(i) : self.dup
+    self[0, self.rindex(delim) || self.length]
   end
 
 end
