@@ -1,4 +1,4 @@
-require 'casual_support/hash/setbang'
+require_relative '../hash/setbang'
 
 module Enumerable
 

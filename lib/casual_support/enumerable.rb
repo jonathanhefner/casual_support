@@ -1,2 +1,2 @@
-require 'casual_support/enumerable/duplicates'
-require 'casual_support/enumerable/index_to'
+require_relative 'enumerable/duplicates'
+require_relative 'enumerable/index_to'
