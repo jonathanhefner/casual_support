@@ -11,7 +11,7 @@ class String
   #
   # This method is also faster.
   def first(limit = 1)
-    limit <= 0 ? '' : self[0, limit]
+    self[0, limit] || ''
   end
 
 end
