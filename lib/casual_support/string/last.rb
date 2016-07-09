@@ -1,7 +1,16 @@
 class String
 
   # This replaces Active Support's +String#last+, but it returns an
-  # empty string when given a negative argument.  It is faster.
+  # empty string when given a negative +limit+ argument, whereas Active
+  # Support's +String#last+ removes +limit.abs+ characters from the
+  # beginning of the string.  Returning an empty string makes more sense
+  # if you interpret +last+ as "keep upto +limit+ characters."  At most,
+  # a negative +limit+ should *keep* that many characters from the
+  # beginning of the string, rather than *remove* that many characters
+  # (but returning an empty string is a good conservative choice).  Also
+  # see +String#first+.
+  #
+  # This method is also faster.
   def last(limit = 1)
     limit <= 0 ? '' : self[length - limit, length]
   end
