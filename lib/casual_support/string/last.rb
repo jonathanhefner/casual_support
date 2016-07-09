@@ -12,7 +12,7 @@ class String
   #
   # This method is also faster.
   def last(limit = 1)
-    limit <= 0 ? '' : self[length - limit, length]
+    limit < 0 ? '' : (self[-limit, limit] || self.dup)
   end
 
 end
