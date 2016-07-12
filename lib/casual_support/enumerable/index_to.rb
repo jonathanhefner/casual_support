@@ -1,4 +1,4 @@
-require_relative '../hash/setbang'
+require_relative '../hash/putbang'
 
 module Enumerable
 
@@ -10,7 +10,7 @@ module Enumerable
   # @yieldreturn value to associate with the +elem+ key
   # @return [Hash] hash with the +Enumerable+'s elements as keys
   def index_to()
-    self.reduce({}){|h, k| h.set!(k, (yield k)) }
+    self.reduce({}){|h, k| h.put!(k, (yield k)) }
   end
 
 end

@@ -1,1 +1,1 @@
-require_relative 'hash/setbang'
+require_relative 'hash/putbang'

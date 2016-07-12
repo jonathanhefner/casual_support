@@ -7,7 +7,7 @@ class Hash
   # @param key
   # @param value
   # @return [Hash] the modified hash
-  def set!(key, value)
+  def put!(key, value)
     self[key] = value
     self
   end
