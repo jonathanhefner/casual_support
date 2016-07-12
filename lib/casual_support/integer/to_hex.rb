@@ -7,9 +7,8 @@ class Integer
   #
   # @param [Integer] width desired width of the zero-padded string
   # @return [String] hexadecimal string
-  def to_hex(width = nil)
-    h = self.to_s(16)
-    width ? h.rjust(width, '0'.freeze) : h
+  def to_hex(width = 0)
+    width > 1 ? self.to_s(16).rjust(width, '0'.freeze) : self.to_s(16)
   end
 
 end
