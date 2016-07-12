@@ -1,7 +1,8 @@
 class Hash
 
-  # Sets a value like +Hash#[]=+, but returns the modified Hash instead
-  # of the value.  Useful with +#reduce+, and faster than +Hash#merge!+.
+  # Associates a key-value a la +Hash#[]=+, but returns the modified
+  # Hash instead of the value.  Useful with +#reduce+, and faster than
+  # +Hash#merge!+.
   #
   # @param key
   # @param value
