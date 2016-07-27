@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class NumericConstrainTest < Minitest::Test
+class ComparableConstrainTest < Minitest::Test
 
   def test_constrain_below
     assert_equal 100, (99).constrain(100, 110)
