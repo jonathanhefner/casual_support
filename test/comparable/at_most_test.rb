@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class NumericAtMostTest < Minitest::Test
+class ComparableAtMostTest < Minitest::Test
 
   def test_above_at_most
     assert_equal 100, (101).at_most(100)
