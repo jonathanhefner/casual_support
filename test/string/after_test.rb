@@ -10,8 +10,8 @@ class StringAfterTest < Minitest::Test
     assert_equal '', 'aa '.after(' ')
   end
 
-  def test_after_no_delim
-    assert_equal '', 'aa bb cc'.after('z')
+  def test_after_missing_delim
+    assert_equal nil, 'aa bb cc'.after('z')
   end
 
 end
