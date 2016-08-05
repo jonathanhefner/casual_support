@@ -1,32 +1,67 @@
 # casual_support
 
-Utility methods as extensions to Ruby core objects.  Stuff I want in Active Support.
+Utility methods as extensions to Ruby core objects, a la Active Support.
+
+Also a nod to the epic [Facets] library, which has a vast quantity and
+wide variety of utility functions.  casual_support distinguishes itself
+in a few ways:
+
+- Focus on fast implementations.  See the benchmarks directory for
+  performance comparisons with typical and alternative implementations.
+- Low memory footprint without requiring cherry-picking.  Cherry-picking
+  is still possible though!
+- Intended to be used alongside Active Support.  Does not clash with
+  Active Support methods, and overrides only a few to provide more
+  performant implementations.
+
+[Facets]: https://github.com/rubyworks/facets
+
+
+## Utility Methods
+
+- Comparable
+  - [at_least](http://www.rubydoc.info/gems/casual_support/Comparable%3Aat_least)
+  - [at_most](http://www.rubydoc.info/gems/casual_support/Comparable%3Aat_most)
+  - [clamp](http://www.rubydoc.info/gems/casual_support/Comparable%3Aclamp)
+- Date
+  - [to_ymd](http://www.rubydoc.info/gems/casual_support/Date%3Ato_ymd)
+- Enumerable
+  - [duplicates](http://www.rubydoc.info/gems/casual_support/Enumerable%3Aduplicates)
+  - [index_to](http://www.rubydoc.info/gems/casual_support/Enumerable%3Aindex_to)
+- Hash
+  - [put!](http://www.rubydoc.info/gems/casual_support/Hash%3Aput%21)
+- Integer
+  - [to_hex](http://www.rubydoc.info/gems/casual_support/Integer%3Ato_hex)
+- String
+  - [after](http://www.rubydoc.info/gems/casual_support/String%3Aafter)
+  - [after_last](http://www.rubydoc.info/gems/casual_support/String%3Aafter_last)
+  - [before](http://www.rubydoc.info/gems/casual_support/String%3Abefore)
+  - [before_last](http://www.rubydoc.info/gems/casual_support/String%3Abefore_last)
+  - [between](http://www.rubydoc.info/gems/casual_support/String%3Abetween)
+  - [drop](http://www.rubydoc.info/gems/casual_support/String%3Adrop)
+  - [first](http://www.rubydoc.info/gems/casual_support/String%3Afirst)
+  - [from](http://www.rubydoc.info/gems/casual_support/String%3Afrom)
+  - [last](http://www.rubydoc.info/gems/casual_support/String%3Alast)
+  - [lchomp](http://www.rubydoc.info/gems/casual_support/String%3Alchomp)
+  - [prefix](http://www.rubydoc.info/gems/casual_support/String%3Aprefix)
+  - [suffix](http://www.rubydoc.info/gems/casual_support/String%3Asuffix)
+  - [to](http://www.rubydoc.info/gems/casual_support/String%3Ato)
+- Time
+  - [to_hms](http://www.rubydoc.info/gems/casual_support/Time%3Ato_hms)
+  - [to_ymd](http://www.rubydoc.info/gems/casual_support/Time%3Ato_ymd)
 
 
 ## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'casual_support'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
 
     $ gem install casual_support
 
 
 ## Development
 
-Run `rake test` to run the tests. You can also run `rake irb` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Run `rake test` to run the tests.  You can also run `rake irb` for an
+interactive prompt that pre-loads the project code.
 
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+[MIT License](http://opensource.org/licenses/MIT)
