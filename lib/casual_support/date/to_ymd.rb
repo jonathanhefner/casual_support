@@ -3,7 +3,7 @@ require 'date'
 class Date
 
   # Formats date as "YYYY-MM-DD" (e.g. "1999-12-31").  Shortcut for
-  # +strftime("%Y-%m-%d")+.
+  # <code>strftime("%Y-%m-%d")</code>.
   #
   # @return [String] the date formatted as "YYYY-MM-DD"
   def to_ymd
