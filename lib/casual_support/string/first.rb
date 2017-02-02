@@ -1,3 +1,5 @@
+require 'active_support/core_ext/string/access'
+
 class String
 
   # This replaces Active Support's +String#first+, but it returns an
@@ -10,6 +12,7 @@ class String
   # an empty string is a good conservative choice).
   #
   # This method is also faster.
+  remove_method :first
   def first(limit = 1)
     self[0, limit] || ''
   end

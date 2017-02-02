@@ -1,3 +1,5 @@
+require 'active_support/core_ext/string/access'
+
 class String
 
   # This replaces Active Support's +String#last+, but it returns an
@@ -11,6 +13,7 @@ class String
   # see +String#first+.
   #
   # This method is also faster.
+  remove_method :last
   def last(limit = 1)
     limit < 0 ? '' : (self[-limit, limit] || self.dup)
   end
