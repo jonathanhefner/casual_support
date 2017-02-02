@@ -19,15 +19,15 @@ class StringBetweenTest < Minitest::Test
   end
 
   def test_between_missing_open
-    assert_equal nil, 'aa bb] cc'.between('[', ']')
+    assert_nil 'aa bb] cc'.between('[', ']')
   end
 
   def test_between_missing_close
-    assert_equal nil, 'aa [bb cc'.between('[', ']')
+    assert_nil 'aa [bb cc'.between('[', ']')
   end
 
   def test_between_missing_both
-    assert_equal nil, 'aa bb cc'.between('[', ']')
+    assert_nil 'aa bb cc'.between('[', ']')
   end
 
 end

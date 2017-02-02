@@ -11,7 +11,7 @@ class StringAfterLastTest < Minitest::Test
   end
 
   def test_after_last_missing_delim
-    assert_equal nil, 'aa bb cc'.after_last('z')
+    assert_nil 'aa bb cc'.after_last('z')
   end
 
 end
