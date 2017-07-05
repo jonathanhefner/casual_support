@@ -1,9 +1,12 @@
 class Time
 
-  # Formats time as "HH:MM:SS" (e.g. "23:59:59").  Equivalent to
-  # <code>strftime("%H:%M:%S")</code>, but faster.
+  # Formats the Time as "HH:MM:SS".  Equivalent to
+  # +strftime("%H:%M:%S")+, but faster.
   #
-  # @return [String] the time formatted as "HH:MM:SS"
+  # @example
+  #   Time.new(1999, 12, 31, 23, 59, 59).to_hms  # == "23:59:59"
+  #
+  # @return [String]
   def to_hms
     # Date#strftime appears to be **much** faster than Time#strftime
     # (nearly 3x faster!).  If Time#strftime becomes optimized to that

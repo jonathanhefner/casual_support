@@ -2,8 +2,12 @@ module Comparable
 
   # Enforces an upper bound for the value.
   #
-  # @param [Comparable] limit upper bound
-  # @return [Comparable] value constrained by the upper bound
+  # @example
+  #   120.at_most(100)  # == 100
+  #   90.at_most(100)   # == 90
+  #
+  # @param limit [Comparable]
+  # @return [Comparable]
   def at_most(limit)
     self > limit ? limit : self
   end

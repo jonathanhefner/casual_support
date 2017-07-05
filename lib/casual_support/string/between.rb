@@ -1,12 +1,16 @@
 class String
-  
-  # Returns the portion of the string between the first occurrences of
+
+  # Returns the portion of the String between the first occurrences of
   # an opening and a closing delimiter.  If either delimiter is not
   # found, returns nil.
   #
-  # @param [String] open opening delimiter
-  # @param [String] close closing delimiter
-  # @return [String] portion of the string between the delimiters
+  # @example
+  #   "i <b><3</b> ruby".between("<b>", "</b>")  # == "<3"
+  #   "i <b><3<b> ruby".between("<b>", "</b>")   # == nil
+  #
+  # @param open [String]
+  # @param close [String]
+  # @return [String, nil]
   def between(open, close)
     i = self.index(open)
     if i

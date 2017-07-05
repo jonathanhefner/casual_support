@@ -1,13 +1,17 @@
 class String
 
-  # Prepends a prefix to the string if the string does not already start
-  # with that prefix.  Otherwise returns a duplicate of the string.
-  # Equivalent to <code>gsub(/^(?!fix)/, "fix")</code>.
+  # Prepends a prefix to the String only if the String does not already
+  # start with that prefix.  Otherwise returns a duplicate of the
+  # String.  Equivalent to +gsub(/^(?!prefix)/, "prefix")+.
   #
-  # @param [String] fix prefix to prepend
-  # @return [String] prefixed string
-  def prefix(fix)
-    self.start_with?(fix) ? self.dup : "#{fix}#{self}"
+  # @example
+  #   "example.com".prefix("www.")      # == "www.example.com"
+  #   "www.example.com".prefix("www.")  # == "www.example.com"
+  #
+  # @param affix [String]
+  # @return [String]
+  def prefix(affix)
+    self.start_with?(affix) ? self.dup : "#{affix}#{self}"
   end
 
 end

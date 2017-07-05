@@ -1,9 +1,12 @@
 class Time
 
-  # Formats time as "YYYY-MM-DD" (e.g. "1999-12-31").  Equivalent to
-  # <code>strftime("%Y-%m-%d")</code>, but faster.
+  # Formats the Time as "YYYY-MM-DD".  Equivalent to
+  # +strftime("%Y-%m-%d")+, but faster.
   #
-  # @return [String] the time formatted as "YYYY-MM-DD"
+  # @example
+  #   Time.new(1999, 12, 31, 23, 59, 59).to_ymd  # == "1999-12-31"
+  #
+  # @return [String]
   def to_ymd
     # Date#strftime appears to be **much** faster than Time#strftime
     # (nearly 3x faster!).  If Time#strftime becomes optimized to that

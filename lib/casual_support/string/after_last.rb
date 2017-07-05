@@ -1,14 +1,20 @@
 class String
 
   # Searches for the last occurrence of a delimiter, and returns the
-  # portion of the string after that.  If the delimiter is not found,
-  # returns nil.  Equivalent to <code>split(delim, -1).drop(1)[-1]</code>.
+  # portion of the String after that.  If the delimiter is not found,
+  # returns nil.  Equivalent to +split(delimiter, -1).drop(1)[-1]+ for
+  # non-empty delimiters.
   #
-  # @param [String] delim delimiter to search for
-  # @return [String] portion of the string after the last +delim+
-  def after_last(delim)
-    i = self.rindex(delim)
-    i && self[i + delim.length, self.length]
+  # @example
+  #   "/path/to/file".after_last("/")  # == "file"
+  #   "/path/to/file".after_last(".")  # == nil
+  #   "/path/to/file".after_last("")   # == ""
+  #
+  # @param delimiter [String]
+  # @return [String, nil]
+  def after_last(delimiter)
+    i = self.rindex(delimiter)
+    i && self[i + delimiter.length, self.length]
   end
 
 end

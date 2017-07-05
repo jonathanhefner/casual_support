@@ -1,15 +1,20 @@
 class String
 
   # Searches for the first occurrence of a delimiter, and returns the
-  # portion of the string after that.  If the delimiter is not found,
-  # returns nil.  Equivalent to <code>split(delim, 2)[1]</code> for
-  # non-empty delimiters.
+  # portion of the String after that.  If the delimiter is not found,
+  # returns nil.  Equivalent to +split(delimiter, 2)[1]+ for non-empty
+  # delimiters.
   #
-  # @param [String] delim delimiter to search for
-  # @return [String] portion of the string after the first +delim+
-  def after(delim)
-    i = self.index(delim)
-    i && self[i + delim.length, self.length]
+  # @example
+  #  "http://www.example.com".after("://")  # == "www.example.com"
+  #  "http://www.example.com".after("?")    # == nil
+  #  "http://www.example.com".after("")     # == "http://www.example.com"
+  #
+  # @param delimiter [String]
+  # @return [String, nil]
+  def after(delimiter)
+    i = self.index(delimiter)
+    i && self[i + delimiter.length, self.length]
   end
 
 end
