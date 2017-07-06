@@ -14,8 +14,4 @@ class EnumerableDuplicatesTest < Minitest::Test
     assert_equal [3, 1, 4], [1, 3, 4, 3, 1, 4].duplicates
   end
 
-  def test_duplicates_with_block
-    assert_equal %w[x y z], %w[X Y Z x y z].duplicates(&:upcase)
-  end
-
 end
