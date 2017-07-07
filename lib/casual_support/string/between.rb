@@ -9,8 +9,11 @@ class String
   # @return [String] portion of the string between the delimiters
   def between(open, close)
     i = self.index(open)
-    j = self.index(close, i + 1) if i
-    j && self[i + 1, j - i - 1]
+    if i
+      i += open.length
+      j = self.index(close, i)
+      self[i, j - i] if j
+    end
   end
 
 end
