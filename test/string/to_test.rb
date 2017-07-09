@@ -2,42 +2,32 @@ require 'test_helper'
 
 class StringToTest < Minitest::Test
 
-  S = 'hello'
+  SUBJECT = "abcdef"
 
-  def test_to_positive
-    assert_equal (S[0] + S[1]), S.to(1)
+  def test_range
+    (-SUBJECT.length - 2..SUBJECT.length + 2).each do |position|
+      assert_invariants SUBJECT, position, SUBJECT.to(position)
+    end
   end
 
-  def test_to_end
-    assert_equal_not_same S, S.to(S.length - 1)
+  def test_empty_subject
+    (-2..2).each do |position|
+      assert_invariants "", position, "".to(position)
+    end
   end
 
-  def test_to_large_positive
-    assert_equal_not_same S, S.to(S.length)
+
+  private
+
+  def assert_invariants(subject, position, result)
+    refute_same subject, result
+
+    assert subject.start_with?(result)
+
+    p = [[position, -subject.length - 1].max, subject.length - 1].min
+    expected_length = p + (p < 0 ? subject.length : 0) + 1
+    assert_equal expected_length, result.length
   end
 
-  def test_to_huge_positive
-    assert_equal_not_same S, S.to(S.length * 10)
-  end
-
-  def test_to_zero
-    assert_equal S[0], S.to(0)
-  end
-
-  def test_to_negative
-    assert_equal (S[0] + S[1]), S.to(S.length * -1 + 1)
-  end
-
-  def test_to_beginning
-    assert_equal '', S.to(S.length * -1 - 1)
-  end
-
-  def test_to_large_negative
-    assert_equal '', S.to(S.length * -1 - 2)
-  end
-
-  def test_to_huge_negative
-    assert_equal '', S.to(S.length * -10)
-  end
 
 end

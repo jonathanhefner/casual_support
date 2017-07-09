@@ -2,13 +2,35 @@ require 'test_helper'
 
 class StringBeforeLastTest < Minitest::Test
 
-  def test_before_last_multi_delim
-    assert_equal 'aa bb', 'aa bb cc'.before_last(' ')
+  SUBJECTS = [
+    "",
+    "ab",
+    "ab cd",
+    "ab cd ef",
+  ]
+
+  def test_subjects
+    SUBJECTS.each do |subject|
+      assert_invariants subject, " ", subject.before_last(" ")
+    end
   end
 
-  def test_before_last_no_delim
-    s = 'aa bb cc'
-    assert_equal_not_same s, s.before_last('z')
+  def test_subjects_with_empty_delimiter
+    SUBJECTS.each do |subject|
+      assert_invariants subject, "", subject.before_last("")
+    end
+  end
+
+
+  private
+
+  def assert_invariants(subject, delimiter, result)
+    refute_same subject, result
+
+    assert subject.start_with?(result)
+
+    assert_operator subject[result.length..-1].scan(delimiter).length, :<=, 1,
+      "Delimiter must occur at most once after result"
   end
 
 end

@@ -2,42 +2,29 @@ require 'test_helper'
 
 class StringFirstTest < Minitest::Test
 
-  S = 'hello'
+  SUBJECT = "abc"
 
-  def test_first_default
-    assert_equal S[0], S.first
+  def test_range
+    (-2..SUBJECT.length + 2).each do |n|
+      assert_invariants SUBJECT, n, SUBJECT.first(n)
+    end
   end
 
-  def test_first_positive
-    assert_equal (S[0] + S[1]), S.first(2)
+  def test_empty_subject
+    (-2..2).each do |n|
+      assert_invariants "", n, "".first(n)
+    end
   end
 
-  def test_first_all
-    assert_equal_not_same S, S.first(S.length)
-  end
 
-  def test_first_large_positive
-    assert_equal_not_same S, S.first(S.length + 1)
-  end
+  private
 
-  def test_first_huge_positive
-    assert_equal_not_same S, S.first(S.length * 10)
-  end
+  def assert_invariants(subject, n, result)
+    refute_same subject, result
 
-  def test_first_zero
-    assert_equal '', S.first(0)
-  end
+    assert subject.start_with?(result)
 
-  def test_first_negative
-    assert_equal '', S.first(-1)
-  end
-
-  def test_first_large_negative
-    assert_equal '', S.first(S.length * -1 - 1)
-  end
-
-  def test_first_huge_negative
-    assert_equal '', S.first(S.length * -10)
+    assert_operator result.length, :<=, [n, 0].max
   end
 
 end

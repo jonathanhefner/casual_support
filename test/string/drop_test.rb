@@ -2,24 +2,29 @@ require 'test_helper'
 
 class StringDropTest < Minitest::Test
 
-  def test_drop_negative
-    assert_equal 'hello', 'hello'.drop(-1)
+  SUBJECT = "abc"
+
+  def test_range
+    (-2..SUBJECT.length + 2).each do |n|
+      assert_invariants SUBJECT, n, SUBJECT.drop(n)
+    end
   end
 
-  def test_drop_zero
-    assert_equal 'hello', 'hello'.drop(0)
+  def test_empty_subject
+    (-2..2).each do |n|
+      assert_invariants "", n, "".drop(n)
+    end
   end
 
-  def test_drop_some
-    assert_equal 'llo', 'hello'.drop(2)
-  end
 
-  def test_drop_all
-    assert_equal '', 'hello'.drop(5)
-  end
+  private
 
-  def test_drop_too_many
-    assert_equal '', 'hello'.drop(6)
+  def assert_invariants(subject, n, result)
+    refute_same subject, result
+
+    assert subject.end_with?(result)
+
+    assert_operator result.length, :<=, [subject.length - n, 0].max
   end
 
 end

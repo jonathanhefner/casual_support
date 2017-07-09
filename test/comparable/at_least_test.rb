@@ -2,16 +2,18 @@ require 'test_helper'
 
 class ComparableAtLeastTest < Minitest::Test
 
-  def test_above_at_least
-    assert_equal 101, (101).at_least(100)
+  def test_range
+    limit = 100
+    (limit - 2..limit + 2).each do |subject|
+      assert_invariants subject, limit, subject.at_least(limit)
+    end
   end
 
-  def test_equal_at_least
-    assert_equal 100, (100).at_least(100)
-  end
 
-  def test_below_at_least
-    assert_equal 100, (99).at_least(100)
+  private
+
+  def assert_invariants(subject, limit, result)
+    assert_equal [subject, limit].max, result
   end
 
 end

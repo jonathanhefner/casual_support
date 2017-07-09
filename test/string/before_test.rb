@@ -2,13 +2,35 @@ require 'test_helper'
 
 class StringBeforeTest < Minitest::Test
 
-  def test_before_multi_delim
-    assert_equal 'aa', 'aa bb cc'.before(' ')
+  SUBJECTS = [
+    "",
+    "ab",
+    "ab cd",
+    "ab cd ef",
+  ]
+
+  def test_subjects
+    SUBJECTS.each do |subject|
+      assert_invariants subject, " ", subject.before(" ")
+    end
   end
 
-  def test_before_no_delim
-    s = 'aa bb cc'
-    assert_equal_not_same s, s.before('z')
+  def test_subjects_with_empty_delimiter
+    SUBJECTS.each do |subject|
+      assert_invariants subject, "", subject.before("")
+    end
+  end
+
+
+  private
+
+  def assert_invariants(subject, delimiter, result)
+    refute_same subject, result
+
+    assert subject.start_with?(result)
+
+    assert_equal 1, "#{result}#{delimiter}".scan(delimiter).length,
+      "Non-empty delimiter must not occur within result"
   end
 
 end

@@ -2,16 +2,36 @@ require 'test_helper'
 
 class StringSuffixTest < Minitest::Test
 
-  SUFFIX = '.html'
-  WITHOUT_SUFFIX = 'page'
-  WITH_SUFFIX = WITHOUT_SUFFIX + SUFFIX
+  SUBJECTS = [
+    "",
+    "xyz",
+    "xyzxyz",
+    "abcxyzxyz",
+    "abcxyz",
+    "abc",
+  ]
 
-  def test_suffix_basic_usage
-    assert_equal WITH_SUFFIX, WITHOUT_SUFFIX.suffix(SUFFIX)
+  def test_subjects
+    SUBJECTS.each do |subject|
+      assert_invariants subject, "xyz", subject.suffix("xyz")
+    end
   end
 
-  def test_suffix_already_prefixed
-    assert_equal_not_same WITH_SUFFIX, WITH_SUFFIX.suffix(SUFFIX)
+  def test_empty_suffix
+    assert_invariants "abc", "", "abc".suffix("")
+  end
+
+
+  private
+
+  def assert_invariants(subject, affix, result)
+    refute_same subject, result
+
+    assert result.start_with?(subject)
+    assert result.end_with?(affix)
+
+    expected_length = subject.length + (subject.end_with?(affix) ? 0 : affix.length)
+    assert_equal expected_length, result.length
   end
 
 end

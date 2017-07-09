@@ -2,16 +2,23 @@ require 'test_helper'
 
 class IntegerToHexTest < Minitest::Test
 
-  def test_to_hex_without_width
-    assert_equal 'ff', (255).to_hex
+  def test_without_width
+    assert_invariants 255, 0, 255.to_hex
   end
 
-  def test_to_hex_with_width
-    assert_equal '00ff', (255).to_hex(4)
+  def test_width_range
+    (0..8).each do |width|
+      assert_invariants 255, width, 255.to_hex(width)
+    end
   end
 
-  def test_to_hex_with_too_short_width
-    assert_equal 'ff', (255).to_hex(1)
+
+  private
+
+  def assert_invariants(subject, width, result)
+    assert_match %r/^[0-9a-f]+$/, result
+    assert_operator result.length, :>=, width
+    assert_equal subject, result.to_i(16)
   end
 
 end

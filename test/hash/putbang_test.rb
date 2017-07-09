@@ -2,8 +2,12 @@ require 'test_helper'
 
 class HashPutbangTest < Minitest::Test
 
-  def test_basic_usage
-    assert_equal ({1 => 2}), Hash.new.put!(1, 2)
+  def test_example_usage
+    hash = {}.put!(:a, 0).put!(:b, 2)
+    assert_equal({a: 0, b: 2}, hash)
+
+    hash.put!(:a, 1)
+    assert_equal({a: 1, b: 2}, hash)
   end
 
 end

@@ -2,12 +2,23 @@ require 'test_helper'
 
 class DateToYmdTest < Minitest::Test
 
-  def test_to_ymd_proper_format
-    assert_equal '1999-12-31', Date.new(1999, 12, 31).to_ymd
+  SUBJECTS = [
+    Date.new(1999, 12, 31),
+    Date.new(2000, 1, 1),
+  ]
+
+  def test_subjects
+    SUBJECTS.each do |subject|
+      assert_invariants subject, subject.to_ymd
+    end
   end
 
-  def test_to_ymd_zero_padding
-    assert_equal '2000-01-01', Date.new(2000, 1, 1).to_ymd
+
+  private
+
+  def assert_invariants(subject, result)
+    assert_match %r/^\d\d\d\d-\d\d-\d\d$/, result
+    assert_equal subject, Date.parse(result)
   end
 
 end

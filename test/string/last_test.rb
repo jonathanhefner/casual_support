@@ -2,42 +2,29 @@ require 'test_helper'
 
 class StringLastTest < Minitest::Test
 
-  S = 'hello'
+  SUBJECT = "abc"
 
-  def test_last_default
-    assert_equal S[-1], S.last
+  def test_range
+    (-2..SUBJECT.length + 2).each do |n|
+      assert_invariants SUBJECT, n, SUBJECT.last(n)
+    end
   end
 
-  def test_last_positive
-    assert_equal (S[-2] + S[-1]), S.last(2)
+  def test_empty_subject
+    (-2..2).each do |n|
+      assert_invariants "", n, "".last(n)
+    end
   end
 
-  def test_last_all
-    assert_equal_not_same S, S.last(S.length)
-  end
 
-  def test_last_large_positive
-    assert_equal_not_same S, S.last(S.length + 1)
-  end
+  private
 
-  def test_last_huge_positive
-    assert_equal_not_same S, S.last(S.length * 10)
-  end
+  def assert_invariants(subject, n, result)
+    refute_same subject, result
 
-  def test_last_zero
-    assert_equal '', S.last(0)
-  end
+    assert subject.end_with?(result)
 
-  def test_last_negative
-    assert_equal '', S.last(-1)
-  end
-
-  def test_last_large_negative
-    assert_equal '', S.last(S.length * -1 - 1)
-  end
-
-  def test_last_huge_negative
-    assert_equal '', S.last(S.length * -10)
+    assert_operator result.length, :<=, [n, 0].max
   end
 
 end

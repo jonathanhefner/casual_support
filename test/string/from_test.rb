@@ -2,38 +2,34 @@ require 'test_helper'
 
 class StringFromTest < Minitest::Test
 
-  S = 'hello'
+  SUBJECT = "abcdef"
 
-  def test_from_positive
-    assert_equal (S[-2] + S[-1]), S.from(S.length - 2)
+  def test_range
+    (-SUBJECT.length - 2..SUBJECT.length + 2).each do |position|
+      assert_invariants SUBJECT, position, SUBJECT.from(position)
+    end
   end
 
-  def test_from_end
-    assert_equal '', S.from(S.length)
+  def test_empty_subject
+    (-2..2).each do |position|
+      assert_invariants "", position, "".from(position)
+    end
   end
 
-  def test_from_large_positive
-    assert_nil S.from(S.length + 1)
-  end
 
-  def test_from_huge_positive
-    assert_nil S.from(S.length * 10)
-  end
+  private
 
-  def test_from_zero
-    assert_equal_not_same S, S.from(0)
-  end
+  def assert_invariants(subject, position, result)
+    if position < -subject.length || position > subject.length
+      assert_nil result
+    else
+      refute_same subject, result
 
-  def test_from_negative
-    assert_equal (S[-2] + S[-1]), S.from(-2)
-  end
+      assert subject.end_with?(result)
 
-  def test_from_large_negative
-    assert_nil S.from(S.length * -1 - 1)
-  end
-
-  def test_from_huge_negative
-    assert_nil S.from(S.length * -10)
+      expected_length = (position >= 0 ? subject.length : 0) - position
+      assert_equal expected_length, result.length
+    end
   end
 
 end

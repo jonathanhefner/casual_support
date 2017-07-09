@@ -2,18 +2,18 @@ require 'test_helper'
 
 class ComparableClampTest < Minitest::Test
 
-  def test_clamp_below
-    assert_equal 100, (99).clamp(100, 110)
+  def test_range
+    low, high = 0, 5
+    (low - 2..high + 2).each do |subject|
+      assert_invariants subject, low, high, subject.clamp(low, high)
+    end
   end
 
-  def test_clamp_within
-    assert_equal 100, (100).clamp(100, 110)
-    assert_equal 105, (105).clamp(100, 110)
-    assert_equal 110, (110).clamp(100, 110)
-  end
 
-  def test_clamp_above
-    assert_equal 110, (111).clamp(100, 110)
+  private
+
+  def assert_invariants(subject, low, high, result)
+    assert_equal [[subject, low].max, high].min, result
   end
 
 end
