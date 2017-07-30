@@ -22,7 +22,6 @@ in a few ways:
 - Comparable
   - [at_least](http://www.rubydoc.info/gems/casual_support/Comparable%3Aat_least)
   - [at_most](http://www.rubydoc.info/gems/casual_support/Comparable%3Aat_most)
-  - [clamp](http://www.rubydoc.info/gems/casual_support/Comparable%3Aclamp)
 - Date
   - [to_ymd](http://www.rubydoc.info/gems/casual_support/Date%3Ato_ymd)
 - Enumerable
