@@ -41,7 +41,6 @@ in a few ways:
   - [first](http://www.rubydoc.info/gems/casual_support/String%3Afirst)
   - [from](http://www.rubydoc.info/gems/casual_support/String%3Afrom)
   - [last](http://www.rubydoc.info/gems/casual_support/String%3Alast)
-  - [lchomp](http://www.rubydoc.info/gems/casual_support/String%3Alchomp)
   - [prefix](http://www.rubydoc.info/gems/casual_support/String%3Aprefix)
   - [suffix](http://www.rubydoc.info/gems/casual_support/String%3Asuffix)
   - [to](http://www.rubydoc.info/gems/casual_support/String%3Ato)
