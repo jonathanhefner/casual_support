@@ -31,6 +31,8 @@ in a few ways:
   - [put!](http://www.rubydoc.info/gems/casual_support/Hash%3Aput%21)
 - Integer
   - [to_hex](http://www.rubydoc.info/gems/casual_support/Integer%3Ato_hex)
+- Numeric
+  - [sign](http://www.rubydoc.info/gems/casual_support/Numeric%3Asign)
 - String
   - [after](http://www.rubydoc.info/gems/casual_support/String%3Aafter)
   - [after_last](http://www.rubydoc.info/gems/casual_support/String%3Aafter_last)
