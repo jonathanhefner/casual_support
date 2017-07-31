@@ -19,6 +19,8 @@ in a few ways:
 
 ## Utility Methods
 
+- Boolean
+  - [to_z](http://www.rubydoc.info/gems/casual_support/TrueClass%3Ato_z)
 - Comparable
   - [at_least](http://www.rubydoc.info/gems/casual_support/Comparable%3Aat_least)
   - [at_most](http://www.rubydoc.info/gems/casual_support/Comparable%3Aat_most)
