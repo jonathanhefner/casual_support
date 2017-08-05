@@ -3,12 +3,12 @@
 Utility methods as extensions to Ruby core objects, a la Active Support.
 
 Also a nod to the epic [Facets] library, which has a vast quantity and
-wide variety of utility functions.  casual_support distinguishes itself
-in a few ways:
+wide variety of utility functions.  *casual_support* distinguishes
+itself in a few ways:
 
 - Focus on fast implementations.  See the benchmarks directory for
   performance comparisons with typical and alternative implementations.
-- Low memory footprint without requiring cherry-picking.  Cherry-picking
+- Low memory footprint without required cherry-picking.  Cherry-picking
   is still possible though!
 - Intended to be used alongside Active Support.  Does not clash with
   Active Support methods, and overrides only a few to provide more
@@ -20,49 +20,59 @@ in a few ways:
 ## Utility Methods
 
 - Boolean
-  - [to_z](http://www.rubydoc.info/gems/casual_support/TrueClass%3Ato_z)
-- Comparable
-  - [at_least](http://www.rubydoc.info/gems/casual_support/Comparable%3Aat_least)
-  - [at_most](http://www.rubydoc.info/gems/casual_support/Comparable%3Aat_most)
-- Date
-  - [to_ymd](http://www.rubydoc.info/gems/casual_support/Date%3Ato_ymd)
-- Enumerable
-  - [duplicates](http://www.rubydoc.info/gems/casual_support/Enumerable%3Aduplicates)
-  - [index_to](http://www.rubydoc.info/gems/casual_support/Enumerable%3Aindex_to)
-- Hash
-  - [displace](http://www.rubydoc.info/gems/casual_support/Hash%3Adisplace)
-  - [put!](http://www.rubydoc.info/gems/casual_support/Hash%3Aput%21)
-- Integer
-  - [to_hex](http://www.rubydoc.info/gems/casual_support/Integer%3Ato_hex)
-- Numeric
-  - [sign](http://www.rubydoc.info/gems/casual_support/Numeric%3Asign)
-- String
-  - [after](http://www.rubydoc.info/gems/casual_support/String%3Aafter)
-  - [after_last](http://www.rubydoc.info/gems/casual_support/String%3Aafter_last)
-  - [before](http://www.rubydoc.info/gems/casual_support/String%3Abefore)
-  - [before_last](http://www.rubydoc.info/gems/casual_support/String%3Abefore_last)
-  - [between](http://www.rubydoc.info/gems/casual_support/String%3Abetween)
-  - [drop](http://www.rubydoc.info/gems/casual_support/String%3Adrop)
-  - [first](http://www.rubydoc.info/gems/casual_support/String%3Afirst)
-  - [from](http://www.rubydoc.info/gems/casual_support/String%3Afrom)
-  - [last](http://www.rubydoc.info/gems/casual_support/String%3Alast)
-  - [prefix](http://www.rubydoc.info/gems/casual_support/String%3Aprefix)
-  - [suffix](http://www.rubydoc.info/gems/casual_support/String%3Asuffix)
-  - [to](http://www.rubydoc.info/gems/casual_support/String%3Ato)
-- Struct
-  - [assign_attributes](http://www.rubydoc.info/gems/casual_support/Struct%3Aassign_attributes)
-  - [from_h](http://www.rubydoc.info/gems/casual_support/Struct.from_h)
-- Time
-  - [to_hms](http://www.rubydoc.info/gems/casual_support/Time%3Ato_hms)
-  - [to_ymd](http://www.rubydoc.info/gems/casual_support/Time%3Ato_ymd)
+  - [#to_z](http://www.rubydoc.info/gems/casual_support/TrueClass:to_z)
+- [Comparable](http://www.rubydoc.info/gems/casual_support/Comparable)
+  - [#at_least](http://www.rubydoc.info/gems/casual_support/Comparable:at_least)
+  - [#at_most](http://www.rubydoc.info/gems/casual_support/Comparable:at_most)
+- [Date](http://www.rubydoc.info/gems/casual_support/Date)
+  - [#to_ymd](http://www.rubydoc.info/gems/casual_support/Date:to_ymd)
+- [Enumerable](http://www.rubydoc.info/gems/casual_support/Enumerable)
+  - [#duplicates](http://www.rubydoc.info/gems/casual_support/Enumerable:duplicates)
+  - [#index_to](http://www.rubydoc.info/gems/casual_support/Enumerable:index_to)
+- [Hash](http://www.rubydoc.info/gems/casual_support/Hash)
+  - [#displace](http://www.rubydoc.info/gems/casual_support/Hash:displace)
+  - [#put!](http://www.rubydoc.info/gems/casual_support/Hash:put%21)
+- [Integer](http://www.rubydoc.info/gems/casual_support/Integer)
+  - [#to_hex](http://www.rubydoc.info/gems/casual_support/Integer:to_hex)
+- [Numeric](http://www.rubydoc.info/gems/casual_support/Numeric)
+  - [#sign](http://www.rubydoc.info/gems/casual_support/Numeric:sign)
+- [String](http://www.rubydoc.info/gems/casual_support/String)
+  - [#after](http://www.rubydoc.info/gems/casual_support/String:after)
+  - [#after_last](http://www.rubydoc.info/gems/casual_support/String:after_last)
+  - [#before](http://www.rubydoc.info/gems/casual_support/String:before)
+  - [#before_last](http://www.rubydoc.info/gems/casual_support/String:before_last)
+  - [#between](http://www.rubydoc.info/gems/casual_support/String:between)
+  - [#drop](http://www.rubydoc.info/gems/casual_support/String:drop)
+  - [#first](http://www.rubydoc.info/gems/casual_support/String:first)
+  - [#from](http://www.rubydoc.info/gems/casual_support/String:from)
+  - [#last](http://www.rubydoc.info/gems/casual_support/String:last)
+  - [#prefix](http://www.rubydoc.info/gems/casual_support/String:prefix)
+  - [#suffix](http://www.rubydoc.info/gems/casual_support/String:suffix)
+  - [#to](http://www.rubydoc.info/gems/casual_support/String:to)
+- [Struct](http://www.rubydoc.info/gems/casual_support/Struct)
+  - [#assign_attributes](http://www.rubydoc.info/gems/casual_support/Struct:assign_attributes)
+  - [.from_h](http://www.rubydoc.info/gems/casual_support/Struct.from_h)
+- [Time](http://www.rubydoc.info/gems/casual_support/Time)
+  - [#to_hms](http://www.rubydoc.info/gems/casual_support/Time:to_hms)
+  - [#to_ymd](http://www.rubydoc.info/gems/casual_support/Time:to_ymd)
 
 
 ## Installation
 
-    $ gem install casual_support
+Install from [Ruby Gems](https://rubygems.org/gems/casual_support):
+
+```bash
+$ gem install casual_support
+```
+
+Then require in your Ruby script:
+
+```ruby
+require "casual_support"
+```
 
 
-## Development
+## Contributing
 
 Run `rake test` to run the tests.  You can also run `rake irb` for an
 interactive prompt that pre-loads the project code.
@@ -70,4 +80,4 @@ interactive prompt that pre-loads the project code.
 
 ## License
 
-[MIT License](http://opensource.org/licenses/MIT)
+[MIT License](https://opensource.org/licenses/MIT)
