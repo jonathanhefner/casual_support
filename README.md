@@ -51,6 +51,7 @@ in a few ways:
   - [to](http://www.rubydoc.info/gems/casual_support/String%3Ato)
 - Struct
   - [assign_attributes](http://www.rubydoc.info/gems/casual_support/Struct%3Aassign_attributes)
+  - [from_h](http://www.rubydoc.info/gems/casual_support/Struct.from_h)
 - Time
   - [to_hms](http://www.rubydoc.info/gems/casual_support/Time%3Ato_hms)
   - [to_ymd](http://www.rubydoc.info/gems/casual_support/Time%3Ato_ymd)
