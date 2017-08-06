@@ -49,6 +49,8 @@ in a few ways:
   - [prefix](http://www.rubydoc.info/gems/casual_support/String%3Aprefix)
   - [suffix](http://www.rubydoc.info/gems/casual_support/String%3Asuffix)
   - [to](http://www.rubydoc.info/gems/casual_support/String%3Ato)
+- Struct
+  - [assign_attributes](http://www.rubydoc.info/gems/casual_support/Struct%3Aassign_attributes)
 - Time
   - [to_hms](http://www.rubydoc.info/gems/casual_support/Time%3Ato_hms)
   - [to_ymd](http://www.rubydoc.info/gems/casual_support/Time%3Ato_ymd)
