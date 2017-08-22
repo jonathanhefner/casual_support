@@ -30,6 +30,7 @@ in a few ways:
   - [duplicates](http://www.rubydoc.info/gems/casual_support/Enumerable%3Aduplicates)
   - [index_to](http://www.rubydoc.info/gems/casual_support/Enumerable%3Aindex_to)
 - Hash
+  - [displace](http://www.rubydoc.info/gems/casual_support/Hash%3Adisplace)
   - [put!](http://www.rubydoc.info/gems/casual_support/Hash%3Aput%21)
 - Integer
   - [to_hex](http://www.rubydoc.info/gems/casual_support/Integer%3Ato_hex)
