@@ -4,7 +4,7 @@ require_relative '../../lib/casual_support'
 
 class String
   def drop_alt1(n)
-    self[n.constrain(0, self.length), self.length]
+    self[n.clamp(0, self.length), self.length]
   end
 end
 
