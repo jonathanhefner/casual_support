@@ -8,9 +8,10 @@ module Enumerable
   # @example
   #   cache = id_list.index_to{|id| find_by_id(id) }
   #
-  # @yieldparam element ['E] element from the Enumerable
-  # @yieldreturn ['V] value to associate with the +element+ key
-  # @return [Hash{'E => 'V}]
+  # @yield [key]
+  # @yieldparam key ['K]
+  # @yieldreturn ['V]
+  # @return [Hash<'K, 'V>]
   def index_to()
     self.reduce({}){|h, k| h.put!(k, (yield k)) }
   end

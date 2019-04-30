@@ -6,15 +6,16 @@ class String
 
   # Returns the last +limit+ characters from the end of the String.
   #
-  # This method replaces Active Support's +String#last+, except that it
-  # returns an empty string when given a negative +limit+ argument,
-  # whereas Active Support's +String#last+ removes +limit.abs+
-  # characters from the beginning of the String.  Returning an empty
-  # string makes more sense if you interpret +last+ as "keep upto
-  # +limit+ characters."  (At most, a negative +limit+ should *keep*
-  # that many characters from the beginning of the String, rather than
-  # *remove* that many characters, but returning an empty string is a
-  # good conservative choice.)  This method is also faster.
+  # This method replaces Active Support's +String#last+.  However, it
+  # returns an empty string when given a negative +limit+, whereas
+  # Active Support 6.0 and previous remove +limit.abs+ characters from
+  # the beginning of the String.  Returning an empty string is more
+  # intuitive behavior if +last+ is interpreted as "keep up to +limit+
+  # characters."  (At most, a negative +limit+ should *keep* +limit.abs+
+  # characters from the beginning of the String, instead of *remove*
+  # that many characters, but returning an empty string is a
+  # conservative compromise.)  This method is also faster than Active
+  # Support's implementation.
   #
   # @example
   #   "abcdef".last(0)   # == ""

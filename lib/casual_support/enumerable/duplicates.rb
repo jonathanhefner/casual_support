@@ -1,7 +1,7 @@
 module Enumerable
 
-  # Returns the first duplicate of each element, preserving order of
-  # appearance.
+  # Returns the first-appearing duplicate of each element, preserving
+  # order of appearance.
   #
   # @example
   #   %w[a a b c c b a d].duplicates  # == ["a", "c", "b"]

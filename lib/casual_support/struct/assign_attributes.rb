@@ -9,8 +9,7 @@ class Struct
   #   Point = Struct.new(:x, :y, :z)
   #   point = Point.new(10, 20, 30)
   #
-  #   point.assign_attributes(y: 30, z: 50)  # == point
-  #   point.to_h                             # == { x: 10, y: 30, z: 50 }
+  #   point.assign_attributes(y: 30, z: 50).to_h  # == { x: 10, y: 30, z: 50 }
   #
   # @param new_attributes [Hash<Symbol, Object>, Hash<String, Object>]
   # @return [self]
