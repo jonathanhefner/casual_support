@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "benchmark/inputs"
 require_relative "../../lib/casual_support"
 
@@ -6,12 +8,12 @@ class Integer
 
   def to_hex_alt1(width = nil)
     h = self.to_s(16)
-    width ? h.rjust(width, "0".freeze) : h
+    width ? h.rjust(width, "0") : h
   end
 
   def to_hex_alt2(width = 0)
     h = self.to_s(16)
-    width > h.length ? h.rjust(width, "0".freeze) : h
+    width > h.length ? h.rjust(width, "0") : h
   end
 
 end
