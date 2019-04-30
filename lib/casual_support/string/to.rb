@@ -1,4 +1,4 @@
-require 'active_support/core_ext/string/access'
+require "active_support/core_ext/string/access"
 
 class String
 
@@ -19,7 +19,7 @@ class String
   # @return [String]
   def to(position)
     position += self.length if position < 0
-    self[0, position + 1] || ''
+    self[0, position + 1] || ""
   end
 
 end

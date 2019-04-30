@@ -1,4 +1,4 @@
-require 'active_support/core_ext/string/access'
+require "active_support/core_ext/string/access"
 
 class String
 
@@ -27,7 +27,7 @@ class String
   # @param limit [Integer]
   # @return [String]
   def first(limit = 1)
-    self[0, limit] || ''
+    self[0, limit] || ""
   end
 
 end

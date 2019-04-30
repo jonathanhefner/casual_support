@@ -1,1 +1,1 @@
-require_relative 'numeric/sign'
+require_relative "numeric/sign"

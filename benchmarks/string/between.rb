@@ -1,5 +1,5 @@
-require 'benchmark/inputs'
-require_relative '../../lib/casual_support'
+require "benchmark/inputs"
+require_relative "../../lib/casual_support"
 
 
 class String
@@ -12,10 +12,10 @@ class String
 end
 
 
-STRING = 'key="111-delim-222-delim-333"'
+STRING = "key=\"111-delim-222-delim-333\""
 
-Benchmark.inputs(['"', '-delim-', '!']) do |job|
-  job.report('String#between'){|delim| STRING.between(delim, delim) }
-  job.report('String#between_alt1'){|delim| STRING.between_alt1(delim, delim) }
+Benchmark.inputs(["\"", "-delim-", "!"]) do |job|
+  job.report("String#between"){|delim| STRING.between(delim, delim) }
+  job.report("String#between_alt1"){|delim| STRING.between_alt1(delim, delim) }
   job.compare!
 end

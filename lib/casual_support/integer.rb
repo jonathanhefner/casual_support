@@ -1,1 +1,1 @@
-require_relative 'integer/to_hex'
+require_relative "integer/to_hex"

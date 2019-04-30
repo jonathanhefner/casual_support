@@ -1,4 +1,4 @@
-require_relative '../hash/putbang'
+require_relative "../hash/putbang"
 
 module Enumerable
 

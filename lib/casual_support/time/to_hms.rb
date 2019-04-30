@@ -11,7 +11,7 @@ class Time
     # Date#strftime appears to be **much** faster than Time#strftime
     # (nearly 3x faster!).  If Time#strftime becomes optimized to that
     # level in the future, it should be used instead of sprintf.
-    sprintf('%02d:%02d:%02d'.freeze, hour, min, sec)
+    sprintf("%02d:%02d:%02d".freeze, hour, min, sec)
   end
 
 end

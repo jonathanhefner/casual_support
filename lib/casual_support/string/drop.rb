@@ -14,7 +14,7 @@ class String
   # @return [String]
   def drop(n)
     return self.dup if n <= 0
-    self[n, self.length] || ''
+    self[n, self.length] || ""
   end
 
 end

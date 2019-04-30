@@ -1,4 +1,4 @@
-require_relative 'assign_attributes'
+require_relative "assign_attributes"
 
 class Struct
 

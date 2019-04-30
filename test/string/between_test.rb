@@ -1,24 +1,24 @@
-require 'test_helper'
+require "test_helper"
 
 class StringBetweenTest < Minitest::Test
 
-  SUBJECT = '<body><p>paragraph "one"</p><br><p>paragraph "two"</p><br></body>'
+  SUBJECT = "<body><p>paragraph one</p><br><p>paragraph two</p><br></body>"
 
   DELIMITERS = [
-    ['<body>', '</body>'],
-    ['<p>', '</p>'],
-    ['<br>', '<br>'],
-    ['<', '>'],
-    ['>', '<'],
-    ['"', '"'],
-    ['<body>', ''],
-    ['', '</body>'],
-    ['<p>', ''],
-    ['', '</p>'],
-    ['', ''],
-    ['<h1>', '</h1>'],
-    ['<body>', '<h1>'],
-    ['</h1>', '<p>'],
+    ["<body>", "</body>"],
+    ["<p>", "</p>"],
+    ["<br>", "<br>"],
+    ["<", ">"],
+    [">", "<"],
+    [""", """],
+    ["<body>", ""],
+    ["", "</body>"],
+    ["<p>", ""],
+    ["", "</p>"],
+    ["", ""],
+    ["<h1>", "</h1>"],
+    ["<body>", "<h1>"],
+    ["</h1>", "<p>"],
   ]
 
   def test_delimiters

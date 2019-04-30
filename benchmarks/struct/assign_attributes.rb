@@ -1,5 +1,5 @@
-require 'benchmark/inputs'
-require_relative '../../lib/casual_support'
+require "benchmark/inputs"
+require_relative "../../lib/casual_support"
 
 
 class Struct
@@ -60,10 +60,10 @@ input_attributes = [
 
 
 Benchmark.inputs(input_attributes) do |job|
-  job.report('Struct#assign_attributes'){|attrs| subject.assign_attributes(attrs) }
-  job.report('Struct#assign_attributes_alt1'){|attrs| subject.assign_attributes_alt1(attrs) }
-  job.report('Struct#assign_attributes_alt2'){|attrs| subject.assign_attributes_alt2(attrs) }
-  job.report('Struct#assign_attributes_alt3'){|attrs| subject.assign_attributes_alt3(attrs) }
-  job.report('Struct#assign_attributes_alt4'){|attrs| subject.assign_attributes_alt4(attrs) }
+  job.report("Struct#assign_attributes"){|attrs| subject.assign_attributes(attrs) }
+  job.report("Struct#assign_attributes_alt1"){|attrs| subject.assign_attributes_alt1(attrs) }
+  job.report("Struct#assign_attributes_alt2"){|attrs| subject.assign_attributes_alt2(attrs) }
+  job.report("Struct#assign_attributes_alt3"){|attrs| subject.assign_attributes_alt3(attrs) }
+  job.report("Struct#assign_attributes_alt4"){|attrs| subject.assign_attributes_alt4(attrs) }
   job.compare!
 end

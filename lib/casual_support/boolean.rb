@@ -1,1 +1,1 @@
-require_relative 'boolean/to_z'
+require_relative "boolean/to_z"

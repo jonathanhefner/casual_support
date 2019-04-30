@@ -1,4 +1,4 @@
-require 'active_support/core_ext/string/access'
+require "active_support/core_ext/string/access"
 
 class String
 
@@ -26,7 +26,7 @@ class String
   # @param limit [Integer]
   # @return [String]
   def last(limit = 1)
-    limit < 0 ? '' : (self[-limit, limit] || self.dup)
+    limit < 0 ? "" : (self[-limit, limit] || self.dup)
   end
 
 end

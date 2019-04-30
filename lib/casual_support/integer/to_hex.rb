@@ -13,7 +13,7 @@ class Integer
   # @param width [Integer]
   # @return [String]
   def to_hex(width = 0)
-    width > 1 ? self.to_s(16).rjust(width, '0'.freeze) : self.to_s(16)
+    width > 1 ? self.to_s(16).rjust(width, "0".freeze) : self.to_s(16)
   end
 
 end

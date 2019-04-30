@@ -1,4 +1,4 @@
-require 'date'
+require "date"
 
 class Date
 
@@ -13,7 +13,7 @@ class Date
     # Date#strftime appears to be **much** faster than Time#strftime
     # (nearly 3x faster!).  Thus it is used here, unlike Time#to_ymd
     # which uses sprintf.
-    self.strftime('%Y-%m-%d'.freeze)
+    self.strftime("%Y-%m-%d".freeze)
   end
 
 end

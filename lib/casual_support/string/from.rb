@@ -1,4 +1,4 @@
-require 'active_support/core_ext/string/access'
+require "active_support/core_ext/string/access"
 
 class String
 
