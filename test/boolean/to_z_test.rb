@@ -2,7 +2,7 @@ require "test_helper"
 
 class BooleanToZTest < Minitest::Test
 
-  def test_exhaustively
+  def test_to_z
     assert_equal 0, false.to_z
     assert_equal 1, true.to_z
   end

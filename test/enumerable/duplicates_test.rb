@@ -2,23 +2,22 @@ require "test_helper"
 
 class EnumerableDuplicatesTest < Minitest::Test
 
-  SUBJECTS = [
+  ENUMERABLES = [
     [0, 1, 1, 2, 3, 5],
     [0, 1, 0, 1, 0, 1],
     [1, 3, 4, 3, 1, 4],
   ]
 
-  def test_subjects
-    SUBJECTS.each do |subject|
-      assert_invariants subject, subject.duplicates
+  def test_duplicates
+    ENUMERABLES.each do |enum|
+      assert_invariants enum, enum.duplicates
     end
   end
 
-
   private
 
-  def assert_invariants(subject, result)
-    positions = subject.each_with_index.reduce({}) do |pos, (e, i)|
+  def assert_invariants(original, result)
+    positions = original.each_with_index.reduce({}) do |pos, (e, i)|
       (pos[e] ||= []) << i
       pos
     end

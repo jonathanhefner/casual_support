@@ -2,26 +2,20 @@ require "test_helper"
 
 class EnumerableIndexToTest < Minitest::Test
 
-  SUBJECTS = [
+  ENUMERABLES = [
     [],
     [0, 1, 2],
     (0...0),
     (0..2),
   ]
 
-  def test_subjects
-    SUBJECTS.each do |subject|
-      assert_invariants subject, proc(&:odd?), subject.index_to(&:odd?)
+  def test_index_to
+    f = proc(&:odd?)
+
+    ENUMERABLES.each do |enum|
+      expected = enum.map{|x| [x, f[x]] }.to_h
+      assert_equal expected, enum.index_to(&f)
     end
-  end
-
-
-  private
-
-  def assert_invariants(subject, fn, result)
-    assert_equal subject.to_a.sort, result.keys.sort
-
-    assert_equal subject.map(&fn), subject.map{|e| result[e] }
   end
 
 end

@@ -2,35 +2,28 @@ require "test_helper"
 
 class StringPrefixTest < Minitest::Test
 
-  SUBJECTS = [
+  STRINGS = [
     "",
     "abc",
-    "abcabc",
-    "abcabcxyz",
-    "abcxyz",
     "xyz",
+    "abcxyz",
   ]
 
-  def test_subjects
-    SUBJECTS.each do |subject|
-      assert_invariants subject, "abc", subject.prefix("abc")
+  def test_prefix
+    STRINGS.product(STRINGS).each do |string, affix|
+      assert_invariants string, affix, string.prefix(affix)
     end
   end
 
-  def test_empty_prefix
-    assert_invariants "xyz", "", "xyz".prefix("")
-  end
-
-
   private
 
-  def assert_invariants(subject, affix, result)
-    refute_same subject, result
+  def assert_invariants(string, affix, result)
+    refute_same string, result
 
     assert result.start_with?(affix)
-    assert result.end_with?(subject)
+    assert result.end_with?(string)
 
-    expected_length = subject.length + (subject.start_with?(affix) ? 0 : affix.length)
+    expected_length = string.length + (string.start_with?(affix) ? 0 : affix.length)
     assert_equal expected_length, result.length
   end
 

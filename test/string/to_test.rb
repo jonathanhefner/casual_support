@@ -2,32 +2,29 @@ require "test_helper"
 
 class StringToTest < Minitest::Test
 
-  SUBJECT = "abcdef"
+  STRINGS = [
+    "",
+    "abcdef",
+  ]
 
-  def test_range
-    (-SUBJECT.length - 2..SUBJECT.length + 2).each do |position|
-      assert_invariants SUBJECT, position, SUBJECT.to(position)
+  def test_to
+    STRINGS.each do |string|
+      (-string.length - 2..string.length + 2).each do |position|
+        assert_invariants string, position, string.to(position)
+      end
     end
   end
-
-  def test_empty_subject
-    (-2..2).each do |position|
-      assert_invariants "", position, "".to(position)
-    end
-  end
-
 
   private
 
-  def assert_invariants(subject, position, result)
-    refute_same subject, result
+  def assert_invariants(string, position, result)
+    refute_same string, result
 
-    assert subject.start_with?(result)
+    assert string.start_with?(result)
 
-    p = [[position, -subject.length - 1].max, subject.length - 1].min
-    expected_length = p + (p < 0 ? subject.length : 0) + 1
+    p = [[position, -string.length - 1].max, string.length - 1].min
+    expected_length = p + (p < 0 ? string.length : 0) + 1
     assert_equal expected_length, result.length
   end
-
 
 end

@@ -2,29 +2,29 @@ require "test_helper"
 
 class StringLastTest < Minitest::Test
 
-  SUBJECT = "abc"
+  STRINGS = [
+    "",
+    "a",
+    "abc",
+  ]
 
-  def test_range
-    (-2..SUBJECT.length + 2).each do |n|
-      assert_invariants SUBJECT, n, SUBJECT.last(n)
+  def test_last
+    STRINGS.each do |string|
+      (-2..string.length + 2).each do |n|
+        assert_invariants string, n, string.last(n)
+      end
     end
   end
-
-  def test_empty_subject
-    (-2..2).each do |n|
-      assert_invariants "", n, "".last(n)
-    end
-  end
-
 
   private
 
-  def assert_invariants(subject, n, result)
-    refute_same subject, result
+  def assert_invariants(string, n, result)
+    refute_same string, result
 
-    assert subject.end_with?(result)
+    assert string.end_with?(result)
 
-    assert_operator result.length, :<=, [n, 0].max
+    expected_length = [[n, 0].max, string.length].min
+    assert_equal expected_length, result.length
   end
 
 end

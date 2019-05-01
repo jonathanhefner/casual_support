@@ -2,7 +2,7 @@ require "test_helper"
 
 class StringBetweenTest < Minitest::Test
 
-  SUBJECT = "<body><p>paragraph one</p><br><p>paragraph two</p><br></body>"
+  STRING = "<body><p>paragraph one</p><br><p>paragraph two</p><br></body>"
 
   DELIMITERS = [
     ["<body>", "</body>"],
@@ -21,25 +21,24 @@ class StringBetweenTest < Minitest::Test
     ["</h1>", "<p>"],
   ]
 
-  def test_delimiters
-    DELIMITERS.each do |open, close|
-      assert_invariants SUBJECT, open, close, SUBJECT.between(open, close)
+  def test_between
+    DELIMITERS.each do |before, after|
+      assert_invariants STRING, before, after, STRING.between(before, after)
     end
   end
 
-
   private
 
-  def assert_invariants(subject, open, close, result)
-    if subject.index(open) && subject.index(close, subject.index(open) + open.length)
-      refute_same subject, result
+  def assert_invariants(string, before, after, result)
+    if string.index(before) && string.index(after, string.index(before) + before.length)
+      refute_same string, result
 
-      assert subject.include?("#{open}#{result}#{close}")
+      assert string.include?("#{before}#{result}#{after}")
 
-      assert_equal subject.index(open), subject.index("#{open}#{result}"),
+      assert_equal string.index(before), string.index("#{before}#{result}"),
         "Opening delimiter must occur exactly once before result"
 
-      assert_equal 1, "#{result}#{close}".scan(close).length,
+      assert_equal 1, "#{result}#{after}".scan(after).length,
         "Non-empty closing delimiter must not occur within result"
     else
       assert_nil result

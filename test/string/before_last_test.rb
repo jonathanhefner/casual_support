@@ -2,34 +2,33 @@ require "test_helper"
 
 class StringBeforeLastTest < Minitest::Test
 
-  SUBJECTS = [
+  STRINGS = [
     "",
     "ab",
     "ab cd",
     "ab cd ef",
   ]
 
-  def test_subjects
-    SUBJECTS.each do |subject|
-      assert_invariants subject, " ", subject.before_last(" ")
+  def test_before_last
+    STRINGS.each do |string|
+      assert_invariants string, " ", string.before_last(" ")
     end
   end
 
-  def test_subjects_with_empty_delimiter
-    SUBJECTS.each do |subject|
-      assert_invariants subject, "", subject.before_last("")
+  def test_before_last_with_empty_delimiter
+    STRINGS.each do |string|
+      assert_invariants string, "", string.before_last("")
     end
   end
-
 
   private
 
-  def assert_invariants(subject, delimiter, result)
-    refute_same subject, result
+  def assert_invariants(string, delimiter, result)
+    refute_same string, result
 
-    assert subject.start_with?(result)
+    assert string.start_with?(result)
 
-    assert_operator subject[result.length..-1].scan(delimiter).length, :<=, 1,
+    assert_operator string[result.length..-1].scan(delimiter).length, :<=, 1,
       "Delimiter must occur at most once after result"
   end
 
