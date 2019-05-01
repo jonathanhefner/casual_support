@@ -25,6 +25,7 @@ itself in a few ways:
   - [#at_least](http://www.rubydoc.info/gems/casual_support/Comparable:at_least)
   - [#at_most](http://www.rubydoc.info/gems/casual_support/Comparable:at_most)
 - [Date](http://www.rubydoc.info/gems/casual_support/Date)
+  - [#to_hms](http://www.rubydoc.info/gems/casual_support/Date:to_hms)
   - [#to_ymd](http://www.rubydoc.info/gems/casual_support/Date:to_ymd)
 - [Enumerable](http://www.rubydoc.info/gems/casual_support/Enumerable)
   - [#duplicates](http://www.rubydoc.info/gems/casual_support/Enumerable:duplicates)
