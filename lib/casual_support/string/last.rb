@@ -27,7 +27,7 @@ class String
   # @param limit [Integer]
   # @return [String]
   def last(limit = 1)
-    limit < 0 ? "" : (self[-limit, limit] || self.dup)
+    self[[length - limit, 0].max, limit] || ""
   end
 
 end
