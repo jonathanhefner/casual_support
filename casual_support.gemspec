@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "casual_support"
   spec.version       = CasualSupport::VERSION
   spec.authors       = ["Jonathan Hefner"]
-  spec.email         = ["jonathan.hefner@gmail.com"]
+  spec.email         = ["jonathan@hefner.pro"]
 
   spec.summary       = %q{Utility extensions to core objects, a la Active Support}
   spec.homepage      = "https://github.com/jonathanhefner/casual_support"
