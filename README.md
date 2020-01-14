@@ -60,13 +60,13 @@ itself in a few ways:
 
 ## Installation
 
-Install from [Ruby Gems](https://rubygems.org/gems/casual_support):
+Install the [gem](https://rubygems.org/gems/casual_support):
 
 ```bash
 $ gem install casual_support
 ```
 
-Then require in your Ruby script:
+Then require in your Ruby code:
 
 ```ruby
 require "casual_support"
