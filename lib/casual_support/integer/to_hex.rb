@@ -2,10 +2,10 @@
 
 class Integer
 
-  # Formats the Integer as a zero-padded lower-case hexadecimal string.
-  # If the length of the raw hexadecimal string exceeds the desired
-  # width, the string will be returned as-is (without padding or
-  # truncation).
+  # Formats the Integer as a zero-padded lowercase hexadecimal string.
+  # If the length of the unpadded hexadecimal string exceeds the
+  # requested +width+, that string is returned without padding or
+  # truncation.
   #
   # @example
   #   250.to_hex     # == "fa"

@@ -1,8 +1,8 @@
 class String
 
   # Returns the portion of the String between the first occurrences of
-  # an opening and a closing delimiter.  If either delimiter is not
-  # found, returns nil.
+  # an +open+ delimiter and a +close+ delimiter.  If either delimiter is
+  # not found, returns nil.
   #
   # @example
   #   "i <b><3</b> ruby".between("<b>", "</b>")  # == "<3"

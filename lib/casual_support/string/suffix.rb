@@ -1,7 +1,7 @@
 class String
 
-  # Appends a suffix to the String only if the String does not already
-  # end with that suffix.  Otherwise returns a duplicate of the String.
+  # Appends +affix+ to the String only if the String does not already
+  # end with +affix+.  Otherwise returns a duplicate of the String.
   # Equivalent to +gsub(/(?<!affix)$/, "affix")+.
   #
   # @example

@@ -1,7 +1,7 @@
 class Hash
 
-  # Associates a key with a value, and returns the key's previously
-  # associated value.  If the key had no previously associated value,
+  # Associates +key+ with +value+, and returns +key+'s previously
+  # associated value.  If +key+ had no previously associated value,
   # returns +Hash#default+.
   #
   # @example

@@ -1,7 +1,7 @@
 class String
 
-  # Searches for the first occurrence of a delimiter, and returns the
-  # portion of the String after that.  If the delimiter is not found,
+  # Searches for the first occurrence of +delimiter+, and returns the
+  # portion of the String after that.  If +delimiter+ is not found,
   # returns nil.  Equivalent to <code>split(delimiter, 2).drop(1)[-1]</code>
   # for non-empty delimiters.
   #

@@ -1,8 +1,8 @@
 class Hash
 
-  # Associates a key with a value.  Similar to +Hash#[]=+, but returns
-  # the Hash instead of the value.  Faster than +Hash#merge!+ for
-  # singular values in a loop.
+  # Associates +key+ with +value+.  Similar to +Hash#[]=+, but returns
+  # the Hash instead of the value.  Faster than +Hash#merge!+ for single
+  # updates in a loop.
   #
   # @example
   #   cache = id_list.reduce({}) do |hash, id|

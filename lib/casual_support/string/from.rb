@@ -4,8 +4,8 @@ class String
 
   remove_method :from
 
-  # Returns the substring starting at a given position, spanning through
-  # the end of the String.
+  # Returns the substring starting at a given +position+, spanning
+  # through the end of the String.
   #
   # This method replaces Active Support's +String#from+.  It is faster.
   #

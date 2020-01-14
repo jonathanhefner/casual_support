@@ -1,7 +1,7 @@
 class String
 
-  # Searches for the last occurrence of a delimiter, and returns the
-  # portion of the String before that.  If the delimiter is not found,
+  # Searches for the last occurrence of +delimiter+, and returns the
+  # portion of the String before that.  If +delimiter+ is not found,
   # returns a copy of the original String.  Equivalent to
   # <code>split(delimiter, -1)[0...-1].join(delimiter)</code> for
   # existent delimiters.

@@ -1,7 +1,7 @@
 class String
 
-  # Searches for the first occurrence of a delimiter, and returns the
-  # portion of the String before that.  If the delimiter is not found,
+  # Searches for the first occurrence of +delimiter+, and returns the
+  # portion of the String before that.  If +delimiter+ is not found,
   # returns a copy of the original String.  Equivalent to
   # <code>split(delimiter, 2)[0]</code> for non-empty delimiters.
   #

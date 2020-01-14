@@ -5,7 +5,7 @@ class String
   remove_method :to
 
   # Returns the substring from the start of the String, spanning through
-  # a given position.
+  # a given +position+.
   #
   # This method replaces Active Support's +String#to+.  It is faster.
   #

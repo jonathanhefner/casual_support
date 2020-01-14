@@ -11,7 +11,7 @@ class Struct
   #
   #   point.assign_attributes(y: 30, z: 50).to_h  # == { x: 10, y: 30, z: 50 }
   #
-  # @param new_attributes [Hash<Symbol, Object>, Hash<String, Object>]
+  # @param new_attributes [Hash{Symbol => Object}, Hash{String => Object}]
   # @return [self]
   def assign_attributes(new_attributes)
     ms = self.members
