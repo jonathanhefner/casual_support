@@ -42,7 +42,6 @@ itself in a few ways:
   - [#before](https://www.rubydoc.info/gems/casual_support/String:before)
   - [#before_last](https://www.rubydoc.info/gems/casual_support/String:before_last)
   - [#between](https://www.rubydoc.info/gems/casual_support/String:between)
-  - [#drop](https://www.rubydoc.info/gems/casual_support/String:drop)
   - [#prefix](https://www.rubydoc.info/gems/casual_support/String:prefix)
   - [#suffix](https://www.rubydoc.info/gems/casual_support/String:suffix)
 - [Struct](https://www.rubydoc.info/gems/casual_support/Struct)
