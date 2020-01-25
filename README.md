@@ -11,8 +11,7 @@ itself in a few ways:
 - Low memory footprint without required cherry-picking.  Cherry-picking
   is still possible though!
 - Intended to be used alongside Active Support.  Does not clash with
-  Active Support methods, and overrides only a few to provide more
-  performant implementations.
+  Active Support methods.
 
 [Facets]: https://github.com/rubyworks/facets
 
@@ -44,10 +43,8 @@ itself in a few ways:
   - [#before_last](https://www.rubydoc.info/gems/casual_support/String:before_last)
   - [#between](https://www.rubydoc.info/gems/casual_support/String:between)
   - [#drop](https://www.rubydoc.info/gems/casual_support/String:drop)
-  - [#from](https://www.rubydoc.info/gems/casual_support/String:from)
   - [#prefix](https://www.rubydoc.info/gems/casual_support/String:prefix)
   - [#suffix](https://www.rubydoc.info/gems/casual_support/String:suffix)
-  - [#to](https://www.rubydoc.info/gems/casual_support/String:to)
 - [Struct](https://www.rubydoc.info/gems/casual_support/Struct)
   - [#assign_attributes](https://www.rubydoc.info/gems/casual_support/Struct:assign_attributes)
   - [.from_h](https://www.rubydoc.info/gems/casual_support/Struct.from_h)
