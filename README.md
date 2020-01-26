@@ -29,8 +29,6 @@ itself in a few ways:
 - [Hash](https://www.rubydoc.info/gems/casual_support/Hash)
   - [#displace](https://www.rubydoc.info/gems/casual_support/Hash:displace)
   - [#put!](https://www.rubydoc.info/gems/casual_support/Hash:put%21)
-- [Integer](https://www.rubydoc.info/gems/casual_support/Integer)
-  - [#to_hex](https://www.rubydoc.info/gems/casual_support/Integer:to_hex)
 - [Numeric](https://www.rubydoc.info/gems/casual_support/Numeric)
   - [#sign](https://www.rubydoc.info/gems/casual_support/Numeric:sign)
 - [String](https://www.rubydoc.info/gems/casual_support/String)
