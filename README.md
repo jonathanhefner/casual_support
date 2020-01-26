@@ -18,8 +18,6 @@ itself in a few ways:
 
 ## Utility Methods
 
-- Boolean
-  - [#to_z](https://www.rubydoc.info/gems/casual_support/TrueClass:to_z)
 - [Date](https://www.rubydoc.info/gems/casual_support/Date)
   - [#to_hms](https://www.rubydoc.info/gems/casual_support/Date:to_hms)
   - [#to_ymd](https://www.rubydoc.info/gems/casual_support/Date:to_ymd)
