@@ -20,9 +20,6 @@ itself in a few ways:
 
 - Boolean
   - [#to_z](https://www.rubydoc.info/gems/casual_support/TrueClass:to_z)
-- [Comparable](https://www.rubydoc.info/gems/casual_support/Comparable)
-  - [#at_least](https://www.rubydoc.info/gems/casual_support/Comparable:at_least)
-  - [#at_most](https://www.rubydoc.info/gems/casual_support/Comparable:at_most)
 - [Date](https://www.rubydoc.info/gems/casual_support/Date)
   - [#to_hms](https://www.rubydoc.info/gems/casual_support/Date:to_hms)
   - [#to_ymd](https://www.rubydoc.info/gems/casual_support/Date:to_ymd)
