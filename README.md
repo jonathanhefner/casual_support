@@ -1,22 +1,10 @@
 # casual_support [![Build Status](https://travis-ci.org/jonathanhefner/casual_support.svg?branch=master)](https://travis-ci.org/jonathanhefner/casual_support)
 
-Utility methods as extensions to Ruby core objects, a la Active Support.
-
-Also a nod to the epic [Facets] library, which has a vast quantity and
-wide variety of utility functions.  *casual_support* distinguishes
-itself in a few ways:
-
-- Focus on fast implementations.  See the benchmarks directory for
-  performance comparisons with typical and alternative implementations.
-- Low memory footprint without required cherry-picking.  Cherry-picking
-  is still possible though!
-- Intended to be used alongside Active Support.  Does not clash with
-  Active Support methods.
-
-[Facets]: https://github.com/rubyworks/facets
+Utility methods as extensions to core Ruby objects, a la
+[Active Support](https://guides.rubyonrails.org/active_support_core_extensions.html).
 
 
-## Utility Methods
+## API
 
 - [Date](https://www.rubydoc.info/gems/casual_support/Date)
   - [#to_hms](https://www.rubydoc.info/gems/casual_support/Date:to_hms)
