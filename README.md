@@ -1,4 +1,4 @@
-# casual_support [![Build Status](https://travis-ci.org/jonathanhefner/casual_support.svg?branch=master)](https://travis-ci.org/jonathanhefner/casual_support)
+# casual_support
 
 Utility methods as extensions to core Ruby objects, a la
 [Active Support](https://guides.rubyonrails.org/active_support_core_extensions.html).
