@@ -33,17 +33,7 @@ Utility methods as extensions to core Ruby objects, a la
 
 ## Installation
 
-Install the [gem](https://rubygems.org/gems/casual_support):
-
-```bash
-$ gem install casual_support
-```
-
-Then require in your Ruby code:
-
-```ruby
-require "casual_support"
-```
+Install the [`casual_support` gem](https://rubygems.org/gems/casual_support).
 
 
 ## Contributing
