@@ -22,7 +22,6 @@ Utility methods as extensions to core Ruby objects, a la
   - [#suffix](https://www.rubydoc.info/gems/casual_support/String:suffix)
 - [Struct](https://www.rubydoc.info/gems/casual_support/Struct)
   - [#assign_attributes](https://www.rubydoc.info/gems/casual_support/Struct:assign_attributes)
-  - [.from_h](https://www.rubydoc.info/gems/casual_support/Struct.from_h)
 - [Time](https://www.rubydoc.info/gems/casual_support/Time)
   - [#to_hms](https://www.rubydoc.info/gems/casual_support/Time:to_hms)
   - [#to_ymd](https://www.rubydoc.info/gems/casual_support/Time:to_ymd)
