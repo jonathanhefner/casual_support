@@ -20,8 +20,6 @@ Utility methods as extensions to core Ruby objects, a la
   - [#between](https://www.rubydoc.info/gems/casual_support/String:between)
   - [#prefix](https://www.rubydoc.info/gems/casual_support/String:prefix)
   - [#suffix](https://www.rubydoc.info/gems/casual_support/String:suffix)
-- [Struct](https://www.rubydoc.info/gems/casual_support/Struct)
-  - [#assign_attributes](https://www.rubydoc.info/gems/casual_support/Struct:assign_attributes)
 - [Time](https://www.rubydoc.info/gems/casual_support/Time)
   - [#to_hms](https://www.rubydoc.info/gems/casual_support/Time:to_hms)
   - [#to_ymd](https://www.rubydoc.info/gems/casual_support/Time:to_ymd)
