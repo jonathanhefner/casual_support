@@ -1,5 +1,3 @@
-require_relative "../hash/putbang"
-
 module Enumerable
 
   # Creates a Hash using the Enumerable's elements as keys, and using
@@ -13,7 +11,7 @@ module Enumerable
   # @yieldreturn [Object] value
   # @return [Hash{key => value}]
   def index_to()
-    self.reduce({}){|h, k| h.put!(k, (yield k)) }
+    self.reduce({}){|h, k| h[k] = yield k; h }
   end
 
 end
