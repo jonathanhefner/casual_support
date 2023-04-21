@@ -12,8 +12,6 @@ Utility methods as extensions to core Ruby objects, a la
 - [Enumerable](https://www.rubydoc.info/gems/casual_support/Enumerable)
   - [#duplicates](https://www.rubydoc.info/gems/casual_support/Enumerable:duplicates)
   - [#index_to](https://www.rubydoc.info/gems/casual_support/Enumerable:index_to)
-- [Hash](https://www.rubydoc.info/gems/casual_support/Hash)
-  - [#displace](https://www.rubydoc.info/gems/casual_support/Hash:displace)
 - [String](https://www.rubydoc.info/gems/casual_support/String)
   - [#after](https://www.rubydoc.info/gems/casual_support/String:after)
   - [#after_last](https://www.rubydoc.info/gems/casual_support/String:after_last)
