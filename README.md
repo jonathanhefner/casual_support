@@ -6,9 +6,6 @@ Utility methods as extensions to core Ruby objects, a la
 
 ## API
 
-- [Date](https://www.rubydoc.info/gems/casual_support/Date)
-  - [#to_hms](https://www.rubydoc.info/gems/casual_support/Date:to_hms)
-  - [#to_ymd](https://www.rubydoc.info/gems/casual_support/Date:to_ymd)
 - [Enumerable](https://www.rubydoc.info/gems/casual_support/Enumerable)
   - [#duplicates](https://www.rubydoc.info/gems/casual_support/Enumerable:duplicates)
 - [String](https://www.rubydoc.info/gems/casual_support/String)
@@ -19,10 +16,6 @@ Utility methods as extensions to core Ruby objects, a la
   - [#between](https://www.rubydoc.info/gems/casual_support/String:between)
   - [#prefix](https://www.rubydoc.info/gems/casual_support/String:prefix)
   - [#suffix](https://www.rubydoc.info/gems/casual_support/String:suffix)
-- [Time](https://www.rubydoc.info/gems/casual_support/Time)
-  - [#to_hms](https://www.rubydoc.info/gems/casual_support/Time:to_hms)
-  - [#to_ymd](https://www.rubydoc.info/gems/casual_support/Time:to_ymd)
-
 
 ## Installation
 
