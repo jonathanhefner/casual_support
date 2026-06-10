@@ -1,3 +1,24 @@
+## 5.0.0
+
+* [BREAKING] Drop support for Ruby < 3.4
+* [BREAKING] Remove `Hash#put!`
+  * Use `hash.merge!(key => value)` instead
+* [BREAKING] Remove `Hash#displace`
+* [BREAKING] Remove `Struct.from_h`
+  * In Ruby 3.2+, call the generated struct class's constructor with
+    keyword arguments instead: `Point.new(x: 1, y: 2, z: 3)`
+* [BREAKING] Remove `Struct#assign_attributes`
+* [BREAKING] Remove `Enumerable#index_to`
+  * Use Active Support's `Enumerable#index_with` instead
+* [BREAKING] Remove `Date#to_hms`
+* [BREAKING] Remove `Date#to_ymd`
+  * Use `date.to_s` instead
+* [BREAKING] Remove `Time#to_hms`
+  * Use `time.strftime("%H:%M:%S")` instead
+* [BREAKING] Remove `Time#to_ymd`
+  * Use `time.to_date.to_s` or `time.strftime("%Y-%m-%d")` instead
+
+
 ## 4.0.0
 
 * [BREAKING] Drop support for Ruby < 2.6
